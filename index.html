@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
-<title>客服</title>
+<title>网页客服</title>
 </head>
 <body>
 <script src="https://chatbot.weixin.qq.com/mmspraiweb_node/dist/static/script/H5_SDK_ACCESS.js"> </script>
@@ -12,7 +12,7 @@
 const params = new URLSearchParams(window.location.search);
 const token = params.get("token") ?? "";
 const openid = params.get("openid") ?? "";
-const user = params.get("user") ?? "";
+const user = "当前用户："+ openid;
 
 WxChat.init({
 	appId: token,
