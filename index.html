@@ -7,12 +7,19 @@
 <body>
 <script src="https://chatbot.weixin.qq.com/mmspraiweb_node/dist/static/script/H5_SDK_ACCESS.js"> </script>
 <script>
+
+const params = new URLSearchParams(window.location.search);
+const token = params.get("token") ?? "";
+const openid = params.get("openid") ?? "";
+const user = params.get("user") ?? "";
+
 WxChat.init({
-	appId: "nGo3n6gTV1FCi1XTNN5tJWGksTx4OF",
-	openId: "o6_bmjrPTlm6_2sgVt7hMZOPfL2M",
-	robotName: "网页客服",
+	appId: token,
+	openId: openid,
+	robotName: user,
 	mode: "fullscreen",
 });
+
 </script>
 </body>
 </html>
